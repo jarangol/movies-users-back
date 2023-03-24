@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.use(usersController);
 
-const port = 3001
+const port = process.env.PORT
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
