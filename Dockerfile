@@ -7,7 +7,7 @@ COPY package.json ./
 
 RUN npm install
 
-# Bundle app source
+# Bundle app source.
 COPY . .
 
 ENV GOOGLE_APPLICATION_CREDENTIALS=./firebase.json
