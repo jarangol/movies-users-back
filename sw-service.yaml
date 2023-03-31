@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: movies-users-back
+spec:
+  selector:
+    app: movies-users-back
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+      nodePort: 31000

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movies-users-back-deployment
+spec:
+  selector:
+    matchLabels:
+      app: movies-users-back
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: movies-users-back
+    spec:
+      containers:
+        - name: movies-users-back
+          image: jarangolp/movies-users-back
+          ports:
+            - containerPort: 3001
+          imagePullPolicy: Never # Image should not be pulled
